@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Card Builder Studio</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAz0lEQVR4AdyUPQrCUBCEJ17DzipW3sPGgwhewecZxIPYeBALxU68SJw0j91AhmVJmiw7sDBv3gebnxVmrqUBLjig4E11Sb2Y28OUX1GHG72WyvaWwStV2wOAdXXyw8ZGhwDrTTJrQEGDiDBeGjCeCzsaUBB7mwROA0QwamlAZP/9GUHTABGMWhqw7GcQ3JFeUfASdUwD1DNQtxpPA8zB7DgE/LIXmdzXzPCABieaHyrbTwaPVG0POOOOgpaK/UX7r9hrx+wDpjzAGFONswP+AAAA//8pUs6oAAAABklEQVQDAOs2YTG6wm6pAAAAAElFTkSuQmCC">
+    <link rel="stylesheet" href="style.css">
+<style>
+
+</style>
+</head>
+<body>
+   <header>
+        <div class="logo-area"><span class="logo-icon"></span><h1 data-pt="Studio de Cartões Ultra" data-en="Ultra Card Studio">Studio de Cartões Ultra</h1></div>
+        <nav class="nav-menu">
+            <button id="menuEditor" class="menu-item active" data-pt="Design" data-en="Design">Design</button>
+            <button id="menuTable" class="menu-item" data-pt="Configuração" data-en="Config">Configuração</button>
+            <button id="menuStats" class="menu-item" data-pt="Estatísticas" data-en="Stats">Estatísticas</button>
+        </nav>
+        <div class="controls"><button id="langToggle">EN</button></div>
+    </header>
+    <main>
+        <section class="drop-zone" id="dropZone">
+            <label id="dropLabel" data-pt="Importe o JSON do cartão ou clique para carregar" data-en="Import card JSON or click to load">Importe o JSON do cartão ou clique para carregar</label>
+            <input type="file" id="fileInput" accept=".json">
+        </section>
+        <section class="metadata-panel hidden" id="metaPanel">
+            <div class="meta-badge"><span id="badgeType"></span> <span id="metaType">JSON</span></div>
+            <div class="meta-badge"><span id="badgeSize"></span> <span id="metaSize">0 KB</span></div>
+            <div class="meta-badge status-ok hidden" id="valOk"><span id="badgeOk"></span> <span data-pt="Estrutura Correta" data-en="Correct Structure">Estrutura Correta</span></div>
+            <div class="meta-badge status-err hidden" id="valErr"><span id="badgeErr"></span> <span data-pt="Estrutura Inválida" data-en="Invalid Structure">Estrutura Inválida</span></div>
+        </section>
+        <div id="tabEditor" class="tab-content workspace">
+            <div class="control-panel"></div>
+            <div class="preview-area">
+                <div id="printArea">
+                    <div id="interactiveCard" class="card-display">
+                        <div class="card-header"><div id="avatarFrame" class="card-avatar"></div></div>
+                        <div class="card-body">
+                            <h2 id="viewName"></h2>
+                            <p id="viewRole"></p>
+                            <span id="viewContact"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tabTable" class="tab-content hidden">
+            <textarea id="filePreview" data-pt-placeholder="Dados JSON..." data-en-placeholder="JSON Data..." placeholder="Dados JSON..."></textarea>
+            <div class="actions-grid">
+                <button id="btnNewFile" data-pt="Resetar" data-en="Reset">Resetar</button>
+                <button id="btnDownload" data-pt="Baixar JSON" data-en="Download JSON">Baixar JSON</button>
+                <button id="btnSavePng" data-pt="Salvar PNG" data-en="Save PNG">Salvar PNG</button>
+                <button id="btnPrint" data-pt="Imprimir / PDF" data-en="Print / PDF">Imprimir / PDF</button>
+            </div>
+        </div>
+        <div id="tabStats" class="tab-content hidden">
+            <section class="stats-panel">
+                <div class="stat-card"><div><span data-pt="Caracteres JSON:" data-en="JSON Chars:">Caracteres JSON:</span><strong id="statChars">0</strong></div></div>
+                <div class="stat-card"><div><span data-pt="Campos Customizados:" data-en="Custom Fields:">Campos Customizados:</span><strong>20</strong></div></div>
+            </section>
+        </div>
+    </main>
+    <script src="config.js"></script>
+  
+    <script src="i18n.js"> </script>
+    <script src="utils.js"></script>
+    <script src="ui.js"></script>
+    <script src="preview.js"> </script>
+     <script src="upload.js"></script>
+
+       <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

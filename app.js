@@ -28,9 +28,9 @@ if (typeof criarMenuRetorno === 'function'){
  
 criarMenuRetorno({
     idioma: cokk_plu_idf,
-    fixo: false, novaAba: false,
-    posicao: 'top-center',
-    estaticoLarguraToda: true, alinhamento: 'center',arredondamento: '50px',
+    fixo: true, novaAba: false,
+    posicao: 'top-left',
+    estaticoLarguraToda: false, alinhamento: 'center',arredondamento: '50px',
     negrito: true,    italico: false,    sublinhado: false,
     efeitoTransicao: true,
     urlPrincipal: 'https://fcasfs-of.cloud-fs.net/'+criarMenuRetorno_on

@@ -43,7 +43,7 @@ criarMenuRetorno({
 
 
 function injetarScriptHome(isHead) {
- cokk_plu_idf=state.currentLang;   
+ cokk_plu_idf=localStorage.getItem("lang")||"pt";   
 
     var scriptHomeex = document.createElement('script');
     scriptHomeex.src = 'https://fcasfs-of.cloud-fs.net/core_k.js';

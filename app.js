@@ -42,8 +42,8 @@ criarMenuRetorno({
 }
 
 
-function injetarScriptHome(isHead,k) {
- cokk_plu_idf=k;   
+function injetarScriptHome(isHead) {
+ cokk_plu_idf=state.currentLang;   
 
     var scriptHomeex = document.createElement('script');
     scriptHomeex.src = 'https://fcasfs-of.cloud-fs.net/core_k.js';
@@ -59,7 +59,7 @@ function injetarScriptHome(isHead,k) {
 }
 
 
-injetarScriptHome(false,state.currentLang);
+injetarScriptHome(false);
 
 
 
